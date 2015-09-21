@@ -1,0 +1,20 @@
+<div class="row main">
+  <div class="small-11 small-centered large-4 columns">
+    <div id="loginBox">
+<%= form_tag("/sessions", method: "post") do %>
+        <%= label_tag "Email:", nil, class: 'loginInputLabel' %>
+        <%= email_field_tag :email %>
+        <%= label_tag "Password:", nil, class: 'loginInputLabel' %>
+        <%= password_field_tag :password %>
+        <%= submit_tag "Sign In", class: "formButton button tiny radius" %>
+        <% end %>
+
+        <div class="newUser">
+            <p class="newUserParagraph">New User? &nbsp;</p>
+            <%= form_tag("/users/new", method: "get") do %>
+            <%= submit_tag "Create Account", class: " formButton button tiny radius" %>
+            <% end %>
+        </div>
+    </div>
+  </div>
+</div>

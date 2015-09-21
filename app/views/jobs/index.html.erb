@@ -1,0 +1,59 @@
+
+<div class="row main">
+    <div class="jobsPanel medium-4 large-4 columns">
+        <h2 class="panelHeading">Jobs</h2>
+        <a class="button" href="#" data-reveal-id="myModal">Track New Job</a>
+
+<div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+      <%= form_tag("/users/#{session[:user_id]}/jobs", method: "POST") do  %>
+          <%= label_tag "Company Name:", nil, class: 'loginInputLabel' %>
+          <%= text_field_tag :company %>
+          <%= label_tag "Job Title:", nil, class: 'loginInputLabel' %>
+          <%= text_field_tag :title %>
+          <%= label_tag "URL:", nil, class: 'loginInputLabel' %>
+          <%= text_field_tag :url %>
+          <%= hidden_field_tag(:user_id, session[:user_id]) %>
+          <%= submit_tag "Add New Job", class: "formButton button tiny radius" %>
+       <% end %>
+     <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+   </div> <!-- end modal div -->
+        <ul id="jobList">
+            <% @jobs.each do |job| %> 
+              <a href="/jobs/<%= job.id %>"><li class="jobListItem">Company: <%= job.company %> <br> Title: <%= job.title %></li></a>
+            <% end %>
+        </ul>
+    </div>
+    <div class="appPanel medium-4 large-4 columns">
+        <h2 class="panelHeading">Application Info</h2>
+        <%= form_tag("/jobs/#{params[:id]}", method: "post") do %>
+        <%= label_tag "url:" %>
+        <%= text_field_tag :url %>
+        <%= label_tag "Date Applied:" %>
+        <%= text_field_tag :app_date %>
+        <%= label_tag "Follow-Up:" %>
+        <%= text_field_tag :app_followup %>
+        <%= label_tag "Notes:" %>
+        <%= text_field_tag :app_notes %>
+        <%= submit_tag "Update Info" %>
+        <% end %>
+    </div>
+    <div class="interviewPanel medium-4 large-4 columns">
+        <h2 class="panelHeading">Interview Info</h2>
+        <%= form_tag("/jobs/#{params[:id]}", method: "post") do %>
+        <%= label_tag "Interview Date:" %>
+        <%= text_field_tag :interview_date %>
+        <%= label_tag "Interviewer Name:" %>
+        <%= text_field_tag :interviewer_name %>
+        <%= label_tag "Interviewer Email:" %>
+        <%= email_field_tag :interviewer_email %>
+        <%= label_tag "Interview Follow-Up:" %>
+        <%= text_field_tag :interview_followup %>
+        <%= label_tag "Notes:" %>
+        <%= text_field_tag :interview_notes %>
+        <%= submit_tag "Update Info" %>
+        <% end %>
+    </div>
+    <div class="archivePanel">
+        
+    </div>
+</div> <!-- end row div -->

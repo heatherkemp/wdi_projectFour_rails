@@ -1,0 +1,135 @@
+body {
+    background-color: #74B3B2;
+    color: white;
+    font-family: 'Antic', sans-serif;
+}
+
+.container {
+  max-width: 1170px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Antic', sans-serif;
+  color: white;
+}
+
+p {
+  color: #6B6B6B;
+}
+
+#logo {
+  /*color: #2676B3;*/
+  color: white;
+  margin-left: 25px;
+  width: 65%;
+  float: left;
+  text-shadow: 1px 1px 2px rgba(107, 107, 107, 1);
+}
+
+p.welcomeUser{
+  color: white;
+}
+
+p.special {
+  font-size: 17px;
+  color: #29899C;
+}
+
+ul {
+  margin-left: 0;
+}
+
+.button {
+    padding: 10px 16px;
+    background: #244CA9;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-family: 'Antic', sans-serif;
+    margin: 10px 0px;
+}
+
+#header {
+   min-height: 80px;
+   background-color: #74B3B2;
+   /*margin-bottom: 30px;*/
+}
+
+/* Login Box Styles */
+#loginBox, #newUserBox{
+    padding: 15px;
+    background-color: white;
+    border: 2px solid #ccc;
+}
+
+.newUser {
+    margin: 15px 0px;
+    text-align: center;
+}
+
+.newUserParagraph {
+  margin-bottom: 4px;
+}
+
+.loggedInUser {
+    float: right;
+    margin-right: 60px;
+    margin-top: 10px;
+}
+
+input.formButton {
+  background-color: #29899C;
+}
+
+/* Job Account View Styles */
+
+.main {
+  clear: both;
+}
+
+h2.panelHeading {
+  font-size: 2em;
+  text-shadow: 1px 1px 2px rgba(107, 107, 107, 1);
+}
+
+label {
+  color: white;
+}
+
+label.loginInputLabel {
+  color: #6B6B6B;
+}
+
+.jobsPanel {
+  background-color: #29899C;
+  min-height: 500px;
+}
+
+.appPanel {
+  background-color: #244CA9;
+  min-height: 500px;
+}
+
+.interviewPanel {
+  background-color: #2676B3;
+  min-height: 500px;
+}
+
+.archivePanel {
+
+}
+
+#jobList {
+  list-style:none;
+}
+
+.jobListItem {
+  padding: 10px 10px;
+  margin: 8px 0px;
+  background-color: white;
+}
+
+/* Modal Styles */
+.reveal-modal {
+    background-color: white;
+}

@@ -1,0 +1,7 @@
+<form method="PUT" action="/jobs/:id">
+    <label for="applicationURL">URL: <input type="text" name="url" value="<%= url %>"></label>
+    <label for="applicationDate">Date Applied: <input type="text" name="app_date" value="<%= app_date %>"></label>
+    <label for="applicationFollowup">Follow-Up: <input type="text" name="app_followup" value="<%= app_followup %>"></label>
+    <label for="applicationNotes">Notes: <textarea name="app_notes" id="applicationNotes" value="<%= app_notes %>" cols="30" rows="10"></textarea></label>
+    <input type="submit" value="Update Info">
+</form>

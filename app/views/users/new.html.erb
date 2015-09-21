@@ -1,0 +1,16 @@
+<div class="row main">
+  <div class="small-11 small-centered large-4 columns">
+    <div id="newUserBox">
+        <p class="special">Create Your Account</p>
+<%= form_tag("/users", method: "post") do %>
+        <%= label_tag "Name:" %>
+        <%= text_field_tag :name %>
+        <%= label_tag "Email:" %>
+        <%= email_field_tag :email %>
+        <%= label_tag "Password:" %>
+        <%= password_field_tag :password %>
+        <%= submit_tag "Create Account", class: "formButton button tiny radius" %>
+        <% end %>
+    </div>
+  </div>
+</div>
