@@ -14,3 +14,5 @@ jobOne = Job.create({company: "XYZ", title: "Junior Web Developer", url: "http:/
 jobTwo = Job.create({company: "ABC", title: "Junior Web Developer", url: "http://abc.com/job", user_id: 1})
 
 jobThree = Job.create({company: "Cool Developers", title: "Web Developer", url: "http://cooldevs.com/job", user_id: 2})
+
+jobFour = Job.create({company: "Dev Shop", title: "Web Developer", url: "http://devshop.com/job", user_id: 2})

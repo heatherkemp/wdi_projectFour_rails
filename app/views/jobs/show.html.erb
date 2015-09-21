@@ -12,7 +12,7 @@
           <%= text_field_tag :title %>
           <%= label_tag "URL:", nil, class: 'loginInputLabel' %>
           <%= text_field_tag :url %>
-          <%= hidden_field_tag(:user_id, session[:user_id]) %>
+          <%= hidden_field_tag :user_id, value: session[:user_id] %>
           <%= submit_tag "Add New Job", class: "formButton button tiny radius" %>
        <% end %>
      <a class="close-reveal-modal" aria-label="Close">&#215;</a>
