@@ -5,16 +5,16 @@
         <a class="button" href="#" data-reveal-id="myModal">Track New Job</a>
 
 <div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-      <%= form_tag("/users/#{session[:user_id]}/jobs", method: "POST") do  %>
-          <%= label_tag "Company Name:", nil, class: 'loginInputLabel' %>
-          <%= text_field_tag :company %>
-          <%= label_tag "Job Title:", nil, class: 'loginInputLabel' %>
-          <%= text_field_tag :title %>
-          <%= label_tag "URL:", nil, class: 'loginInputLabel' %>
-          <%= text_field_tag :url %>
-          <%= hidden_field_tag :user_id, value: session[:user_id] %>
-          <%= submit_tag "Add New Job", class: "formButton button tiny radius" %>
-       <% end %>
+      <%= form_for @job, url: "/users/#{session[:user_id]}/jobs", :method => :post do |f| %>
+           <%= f.label "Company Name:", nil, class: 'loginInputLabel' %>
+          <%= f.text_field :company %>
+          <%= f.label "Job Title:", nil, class: 'loginInputLabel' %>
+          <%= f.text_field :title %>
+          <%= f.label "URL:", nil, class: 'loginInputLabel' %>
+          <%= f.text_field :url %>
+          <%= f.hidden_field :user_id, value: session[:user_id] %>
+          <%= f.submit "Add New Job", class: "formButton button tiny radius" %>
+      <% end %>
      <a class="close-reveal-modal" aria-label="Close">&#215;</a>
    </div> <!-- end modal div -->
 
@@ -35,8 +35,9 @@
         <%= f.text_field :app_followup, value: @job.app_followup %>
         <%= f.label "Notes:" %>
         <%= f.text_field :app_notes, value: @job.app_notes %>
-        <%= f.submit "Update Info" %>
+        <%= f.submit "Update Info", class: "formButton button tiny radius" %>
         <% end %>
+        <%= button_to "Delete Job", "/jobs/#{params[:id]}", method: :delete, class: "deleteButton button tiny radius" %>
     </div>
     <div class="interviewPanel medium-4 large-4 columns">
         <h2 class="panelHeading">Interview Info</h2>
@@ -51,7 +52,7 @@
         <%= f.text_field :interview_followup, value: @job.interview_followup %>
         <%= f.label "Notes:" %>
         <%= f.text_field :interview_notes, value: @job.interview_notes %>
-        <%= f.submit "Update Info" %>
+        <%= f.submit "Update Info", class: "formButton button tiny radius" %>
         <% end %>
     </div>
     <div class="archivePanel">

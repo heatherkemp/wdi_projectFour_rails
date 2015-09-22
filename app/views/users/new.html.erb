@@ -2,14 +2,14 @@
   <div class="small-11 small-centered large-4 columns">
     <div id="newUserBox">
         <p class="special">Create Your Account</p>
-<%= form_tag("/users", method: "post") do %>
-        <%= label_tag "Name:" %>
-        <%= text_field_tag :name %>
-        <%= label_tag "Email:" %>
-        <%= email_field_tag :email %>
-        <%= label_tag "Password:" %>
-        <%= password_field_tag :password %>
-        <%= submit_tag "Create Account", class: "formButton button tiny radius" %>
+<%= form_for @user, url: "/users", :method => :post do |f| %>
+        <%= f.label "Name:", nil, class: 'loginInputLabel' %>
+        <%= f.text_field :name %>
+        <%= f.label "Email:", nil, class: 'loginInputLabel' %>
+        <%= f.email_field :email %>
+        <%= f.label "Password:", nil, class: 'loginInputLabel' %>
+        <%= f.password_field :password %>
+        <%= f.submit "Create Account", class: "formButton button tiny radius" %>
         <% end %>
     </div>
   </div>

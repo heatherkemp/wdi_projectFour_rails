@@ -20,8 +20,8 @@
         <!-- Need to rebuild login check -->
         <% if session[:user_id] %>
         <div class="loggedInUser">
-          <p class="welcomeUser">Welcome</p>
-          <%= link_to "Sign Out", url: "/sessions", method: :delete %>
+          <p class="welcomeUser">Welcome <%= User.find(session[:user_id]).name %></p>
+          <%= button_to "Sign Out", "/sessions", method: :delete, class: "button tiny radius" %>
           <% else %>
           <div class="loggedOutUser"></div>
           <% end %>
