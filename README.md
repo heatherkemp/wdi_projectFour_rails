@@ -1,7 +1,10 @@
 #WDI Project Four
 
 ##Description
-  The objective was to create a CRUD application that can be used to track the status of each job a user applies to, from the date application was made, follow-up and management of interview data.  The original intention was to create a single page application, however, this application was built exclusively in Rails and only simulates a SPA feel.
+  The objective was to create a CRUD application that can be used to track the status of each job a user applies to, from the date application was made, follow-up and management of interview data.  The original intention was to create a single page application, however, this application was built exclusively in Rails and only simulates a SPA feel.  This project uses:  Ruby on Rails, Postgresql, HTML, and Foundation CSS Framework.
+
+  **Link to App on Heroku:**  https://agile-reaches-5120.herokuapp.com/
+
 
 ##Artifacts
 
