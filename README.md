@@ -6,7 +6,7 @@
 ##Artifacts
 
 ####User Stories
-Users Can Do the Following:
+Users Can Do the Following:<br>
 1. Create an account
 2. Login to account
 3. See all jobs being tracked
